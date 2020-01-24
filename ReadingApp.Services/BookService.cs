@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ReadingApp.Data;
 using ReadingApp.Models.Book;
 
@@ -62,6 +59,7 @@ namespace ReadingApp.Services
                 return
                     new BookDetail
                     {
+                        BookId = entity.BookId,
                         Title = entity.Title,
                         Author = entity.Author,
                         BookGenre = entity.BookGenre,
@@ -80,6 +78,7 @@ namespace ReadingApp.Services
                         .Books
                         .Single(e => e.BookId == model.BookId);
 
+                entity.BookId = model.BookId;
                 entity.Title = model.Title;
                 entity.Author = model.Author;
                 entity.BookGenre = model.BookGenre;

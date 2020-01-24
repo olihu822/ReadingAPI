@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
 using ReadingApp.Models.Book;
 using ReadingApp.Services;
 
@@ -22,7 +17,7 @@ namespace ReadingApp.Controllers
             return Ok(books);
         }
 
-        [Route("Book")]
+        [Route("{id:int}")]
         public IHttpActionResult GetBook(int id)
         {
             BookService bookService =
@@ -59,7 +54,7 @@ namespace ReadingApp.Controllers
             return Ok();
         }
 
-        [Route("DeleteBook")]
+        [Route("DeleteBook/{id:int}")]
         public IHttpActionResult Delete(int id)
         {
             var service = CreateBookService();

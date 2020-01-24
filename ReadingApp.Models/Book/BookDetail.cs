@@ -10,21 +10,17 @@ namespace ReadingApp.Models.Book
 {
     public class BookDetail
     {
-        [Required]
+        public int BookId { get; set; }
         public string Title { get; set; }
 
-        [Required]
         public string Author { get; set; }
 
-        [Required]
         [Display(Name = "Genre")]
         public Genre BookGenre { get; set; }
 
-        [Required]
         [Display(Name = "Owned?")]
         public bool Owned { get; set; }
 
-        [Required]
         [Display(Name = "Reviewed?")]
         public bool Reviewed { get; set; }
     }

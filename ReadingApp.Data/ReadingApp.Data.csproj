@@ -76,6 +76,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
+    <Compile Include="Migrations\202001221810422_init.cs" />
+    <Compile Include="Migrations\202001221810422_init.Designer.cs">
+      <DependentUpon>202001221810422_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240126028_BookDetail.cs" />
+    <Compile Include="Migrations\202001240126028_BookDetail.Designer.cs">
+      <DependentUpon>202001240126028_BookDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001241633041_RemoveGuid.cs" />
+    <Compile Include="Migrations\202001241633041_RemoveGuid.Designer.cs">
+      <DependentUpon>202001241633041_RemoveGuid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Review.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,6 +96,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202001221810422_init.resx">
+      <DependentUpon>202001221810422_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240126028_BookDetail.resx">
+      <DependentUpon>202001240126028_BookDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001241633041_RemoveGuid.resx">
+      <DependentUpon>202001241633041_RemoveGuid.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
